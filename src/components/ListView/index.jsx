@@ -3,7 +3,8 @@ import Loader from '../Loader'
 
 export default function ListView({
     isloading,
-    results
+    results,
+    onHandleDetail
 }) {
     return (
         <>
@@ -15,9 +16,11 @@ export default function ListView({
                             <figure key={value.id}>
                                 <img src={value.image} alt={value.name} />
                                 <figcaption>
-                                    <h4>Charater Name :- {value.name}</h4>
-                                    <div>No of Episodes :- {value.episode.length}</div>
-                                    <div>Status :- {value.status}</div>
+                                    <div>Charater Name :- <b>{value.name}</b></div>
+                                    <div>Status :- <b className={`${value.status === 'Alive' ? 'color__green' : value.status === 'Dead' ? 'color__red' : 'color__grey'}`}>{value.status}</b></div>
+                                    <div>
+                                        <button className={`button button__primary`} onClick={() => onHandleDetail(value)}>More About {value.name}</button>
+                                    </div>
                                 </figcaption>
                             </figure>
                         ))

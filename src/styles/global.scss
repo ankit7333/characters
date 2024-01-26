@@ -65,6 +65,11 @@ body, input, textarea, select, button{
   display:flex;
   align-items:center;
   justify-content:center;
+  &__primary{
+    color:$color-ffffff;
+    font-size:1.4rem;
+    background-color:cadetblue;
+  }
 }
 .container{
   max-width:1024px;
@@ -81,5 +86,15 @@ body, input, textarea, select, button{
   font-size:1.6rem;
   margin:50px auto;
   @include border-radius(1rem);
-
+}
+.color{
+  &__green{
+    color:$color-green;
+  }
+  &__red{
+    color:$color-red;
+  }
+  &__grey{
+    color:$color-grey;
+  }
 }

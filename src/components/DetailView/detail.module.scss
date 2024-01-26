@@ -1,0 +1,44 @@
+@use '../../styles/index.scss' as *;
+
+.detail{
+    @extend .p-1;
+    @include fadeInUp;
+    position:relative;
+    figure{
+        display:flex;
+        justify-content:space-between;
+        background-color:$color-ffffff;
+        @include border-radius(1rem);
+        overflow:hidden;
+        @include for-400{
+            flex-direction:column;
+        }
+        img{
+            flex:0 1 40rem;
+            width:40rem;
+            height:40rem;
+            @include for-400{
+                flex:1 1 100%;
+                width:100%;
+                height:100%;
+            }
+        }
+        figcaption{
+            flex:1 1 auto;
+            @extend .p-1;
+            gap:1rem;
+        }
+    }
+}
+.button__close{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:$color-ffffff;
+    font-size:1.4rem;
+    @include border-radius(100%);
+    background-color:$color-grey;
+    @include position(absolute, $top:2rem, $right:2rem);
+    width:2rem;
+    height:2rem;
+}

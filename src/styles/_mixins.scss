@@ -8,12 +8,15 @@
         @content;
     }
 }
-@mixin position($position, $top:null, $right:null, $bottom:null, $left:null) {
-    position:$position;
-    bottom:$bottom;
-    right:$right;
-    left:$left;
-    top:$top;
+@mixin box-shadow($x-axis: 0, $y-axis: 1px, $blur: 2px, $color: $default) {
+    box-shadow: $x-axis $y-axis $blur $color;
+}
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
 }
 @mixin transition($transition...){
     -webkit-transition:$transition;
