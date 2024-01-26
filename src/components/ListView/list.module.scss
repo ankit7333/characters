@@ -1,0 +1,35 @@
+@use '../../styles/index.scss' as *;
+
+.list{
+    display:grid;
+    gap:10px;
+    @extend .p-1;
+    @include fadeInUp;
+    @include for-desktop{
+        grid-template-columns:repeat(2, 1fr);
+    }
+    figure{
+        display:flex;
+        justify-content:space-between;
+        background-color:$color-ffffff;
+        @include border-radius(1rem);
+        overflow:hidden;
+        cursor:pointer;
+        @include for-400{
+            flex-direction:column;
+        }
+        img{
+            flex:0 1 200px;
+            width:200px;
+            height:200px;
+            @include for-400{
+                flex:1 1 100%;
+                width:100%;
+            }
+        }
+        figcaption{
+            flex:1 1 auto;
+            @extend .p-1;
+        }
+    }
+}

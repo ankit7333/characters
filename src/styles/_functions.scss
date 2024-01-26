@@ -1,0 +1,79 @@
+@for $i from 0 through 30{
+    //margin classes
+    $margin:(m-#{$i}:($i + rem));
+    @each $key, $value in $margin{
+        .#{$key}{
+            margin:$value;
+        }
+    }
+    //margin left classes
+    $marginLeft:(ml-#{$i}:($i + rem));
+    @each $key, $value in $marginLeft{
+        .#{$key}{
+            margin-left:$value;
+        }
+    }
+    //margin right classes
+    $marginRight:(mr-#{$i}:($i + rem));
+    @each $key, $value in $marginRight{
+        .#{$key}{
+            margin-right:$value;
+        }
+    }
+    //margin bottom classes
+    $marginBottom:(mb-#{$i}:($i + rem));
+    @each $key, $value in $marginBottom{
+        .#{$key}{
+            margin-bottom:$value;
+        }
+    }
+    //margin top classes
+    $marginTop:(mt-#{$i}:($i + rem));
+    @each $key, $value in $marginTop{
+        .#{$key}{
+            margin-top:$value;
+        }
+    }
+    //padding classes
+    $padding:(p-#{$i}:($i + rem));
+    @each $key, $value in $padding{
+        .#{$key}{
+            padding:$value;
+        }
+    }
+    //margin left classes
+    $paddingLeft:(pl-#{$i}:($i + rem));
+    @each $key, $value in $paddingLeft{
+        .#{$key}{
+            padding-left:$value;
+        }
+    }
+    //margin right classes
+    $paddingRight:(pr-#{$i}:($i + rem));
+    @each $key, $value in $paddingRight{
+        .#{$key}{
+            padding-right:$value;
+        }
+    }
+    //margin bottom classes
+    $paddingBottom:(pb-#{$i}:($i + rem));
+    @each $key, $value in $paddingBottom{
+        .#{$key}{
+            padding-bottom:$value;
+        }
+    }
+    //margin top classes
+    $paddingTop:(pt-#{$i}:($i + rem));
+    @each $key, $value in $paddingTop{
+        .#{$key}{
+            padding-top:$value;
+        }
+    }
+    //font classes
+    $fontSize:(font-#{$i}:($i + rem));
+    @each $key, $value in $fontSize{
+        .#{$key}{
+            font-size:$value;
+        }
+    }
+}

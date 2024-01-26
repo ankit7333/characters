@@ -1,0 +1,36 @@
+@mixin for-desktop{
+    @media (min-width:768px){
+        @content;
+    }
+}
+@mixin for-400{
+    @media (max-width:400px){
+        @content;
+    }
+}
+@mixin position($position, $top:null, $right:null, $bottom:null, $left:null) {
+    position:$position;
+    bottom:$bottom;
+    right:$right;
+    left:$left;
+    top:$top;
+}
+@mixin transition($transition...){
+    -webkit-transition:$transition;
+    -moz-transition:$transition;
+    -o-transition:$transition;
+    transition:$transition;
+}
+@mixin border-radius($top-left:null, $top-right:null, $bottom-right:null, $bottom-left:null){
+    -webkit-border-radius:$top-left $top-right $bottom-right $bottom-left;
+    -moz-border-radius:$top-left $top-right $bottom-right $bottom-left;
+    -ms-border-radius:$top-left $top-right $bottom-right $bottom-left;
+    border-radius:$top-left $top-right $bottom-right $bottom-left;  
+}
+@mixin fadeInUp{
+    -webkit-animation:fadeInUp 0.5s ease forwards;
+    -moz-animation:fadeInUp 0.5s ease forwards;
+    -ms-animation:fadeInUp 0.5s ease forwards;
+    -o-animation:fadeInUp 0.5s ease forwards;
+    animation:fadeInUp 0.5s ease forwards;
+}
