@@ -25,7 +25,7 @@ function App() {
           }
       }
       getCharaterDetails()
-  },[])
+  },[error])
 
     function handleDetail(character){
       setIsDetail(character)
