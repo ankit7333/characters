@@ -8,6 +8,9 @@
     @include for-desktop{
         grid-template-columns:repeat(2, 1fr);
     }
+    &:global(:has(.loader)){
+        display:block;
+    }
     figure{
         display:flex;
         justify-content:space-between;
