@@ -10,23 +10,31 @@
         background-color:$color-ffffff;
         @include border-radius(1rem);
         overflow:hidden;
-        @include for-400{
+        @include box-shadow(.2rem, .2rem, 1.1rem, 0 rgba(167, 159, 159, 0.61));
+        @extend .p-2;
+        @include for-430{
             flex-direction:column;
+            padding:1rem;
         }
         img{
-            flex:0 1 40rem;
-            width:40rem;
-            height:40rem;
-            @include for-400{
-                flex:1 1 100%;
-                width:100%;
-                height:100%;
+            flex:1 1 100%;
+            height:100%;
+            @extend .mb-1;
+            @include for-mobile{
+                flex:0 1 30rem;
+                height:30rem;
+                margin-right:2rem;
+                margin:0 2rem 0 0;
             }
         }
         figcaption{
             flex:1 1 auto;
-            @extend .p-1;
-            gap:1rem;
+            > div{
+                @extend .mb-1;
+                @include for-430{
+                    margin-bottom:0;
+                }
+            }
         }
     }
 }
@@ -41,4 +49,7 @@
     @include position(absolute, $top:2rem, $right:2rem);
     width:2rem;
     height:2rem;
+}
+.key{
+    font-weight:500;
 }

@@ -47,7 +47,7 @@ body{
   touch-action:manipulation;
   -moz-osx-font-smoothing:grayscale;
   -webkit-font-smoothing:antialiased;
-  background-color:$color-272b33d9;
+  background-color:$color-ffffff;
 }
 
 hr{
@@ -69,6 +69,7 @@ body, input, textarea, select, button{
     color:$color-ffffff;
     font-size:1.4rem;
     background-color:cadetblue;
+    @include border-radius(.5rem);
   }
 }
 .container{
@@ -86,6 +87,8 @@ body, input, textarea, select, button{
   font-size:1.6rem;
   margin:5rem auto;
   @include border-radius(1rem);
+  @include box-shadow(.2rem, .2rem, 1.1rem, 0 rgba(167, 159, 159, 0.61));
+  @extend .p-1;
   &__error{
     max-width:30rem;
   }
